@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create and Elevate – Dream big, start small</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- A. NAVIGATION -->
+<nav class="navbar navbar-expand-md sticky-top"><div class="container">
+  <a class="navbar-brand brand" href="#home"><span class="logo">C&amp;E</span>Create and Elevate</a>
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav ms-auto align-items-md-center gap-md-2">
+      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About the Shop</a></li>
+      <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+      <li class="nav-item"><a class="nav-link" href="#community">Community</a></li>
+    </ul>
+    <button class="cartbtn" data-bs-toggle="offcanvas" data-bs-target="#panel">Cart (<span id="count">0</span>)</button>
+  </div>
+</div></nav>
+
+<!-- B. HERO -->
+<section id="home"><div class="container"><div class="row g-5 align-items-center">
+  <div class="col-md-6">
+    <span class="eyebrow">Local craft · Street life</span>
+    <h1>Wear the city you’re building.</h1>
+    <p>Create and Elevate makes honest, well-cut streetwear with local hands and local stories. Graffiti-born graphics, soft heavyweight cotton, and a simple idea: dream big, start small.</p>
+    <a class="btn btn-p" href="#products">Shop the collection</a> <a class="btn btn-o" href="#about">Our story</a>
+  </div>
+  <div class="col-md-6"><div class="art r2"><img src="images/hero.jpg" alt="Model in a graffiti-print tee against a street wall" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div></div>
+</div></div></section>
+
+<!-- C. ABOUT THE SHOP -->
+<section id="about" style="background:var(--sf)"><div class="container"><div class="row g-5 align-items-center">
+  <div class="col-md-6"><div class="art r2"><img src="images/shop.jpg" alt="Inside the Create and Elevate shop" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div></div>
+  <div class="col-md-6">
+    <span class="eyebrow">About the shop</span>
+    <h2>A small studio with a loud wall.</h2>
+    <p>Every piece starts as a sketch on our graffiti wall, is printed in small batches, and is checked by hand before it reaches the rack. We stay small on purpose, so quality always comes first.</p>
+    <a class="btn btn-p" href="#products">Browse the racks</a>
+  </div>
+</div></div></section>
+
+<!-- D. VALUES -->
+<section style="padding:40px 0"><div class="container"><div class="row g-4">
+  <div class="col-md-6"><div class="feat"><div class="circ">✂</div><div><h3>Local craftsmanship</h3><p>Cut, sewn and printed by neighbours who care about the details.</p></div></div></div>
+  <div class="col-md-6"><div class="feat"><div class="circ">★</div><div><h3>Premium, honest cotton</h3><p>Heavyweight fabric that softens with every wash and lasts for years.</p></div></div></div>
+</div></div></section>
+
+<!-- E. FEATURED COLLECTION -->
+<section><div class="container"><div class="row g-5 align-items-center">
+  <div class="col-lg-5">
+    <span class="eyebrow">Featured drop</span>
+    <h2>The Elevate Series</h2>
+    <div class="mini"><div class="art r1"><img src="images/tee-create.jpg" alt="Create tee" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div><div><h3>Create Tee</h3><p>Bold block lettering, boxy fit.</p></div></div>
+    <div class="mini"><div class="art r1"><img src="images/tee-elevate.jpg" alt="Elevate tee" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div><div><h3>Elevate Tee</h3><p>Night-black with mint ink.</p></div></div>
+  </div>
+  <div class="col-lg-7"><div class="art r3"><img src="images/feature.jpg" alt="Featured Elevate Series tee" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div></div>
+</div></div></section>
+
+<!-- PRODUCTS -->
+<section id="products" style="background:var(--sf)"><div class="container">
+  <span class="eyebrow">Products</span><h2>Find your fit</h2>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Search products…" aria-label="Search">
+    <select id="cat" aria-label="Category"><option value="">All categories</option><option>Tees</option><option>Hoodies</option><option>Caps</option><option>Totes</option></select>
+    <select id="sort" aria-label="Sort"><option value="">Sort by</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option><option value="az">Name: A–Z</option></select>
+  </div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<!-- F. NEWSLETTER + COMMUNITY -->
+<section id="community" class="band"><div class="container"><div class="row g-5">
+  <div class="col-md-6">
+    <h2>Join the street list</h2>
+    <p>New drops, studio nights and wall sessions, straight to your inbox.</p>
+    <form class="news" onsubmit="return false"><input id="email" type="email" placeholder="you@email.com" aria-label="Email"><button class="btn btn-p" id="join">Subscribe</button></form>
+    <div class="msg" id="nmsg"></div>
+    <div class="art r4"><img src="images/wall.jpg" alt="Graffiti wall" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+  </div>
+  <div class="col-md-6">
+    <h2>From our community</h2>
+    <div class="who"><div class="circ">MA</div><div><h3>Maya A.</h3><p>The softest tee I own. You can feel it’s made by people who care.</p></div></div>
+    <div class="who"><div class="circ">JR</div><div><h3>Jon R.</h3><p>Got the Elevate hoodie for the cold season. Fit and print are perfect.</p></div></div>
+    <div class="who"><div class="circ">LS</div><div><h3>Lia S.</h3><p>Love that it’s local. I pass the studio wall every week now.</p></div></div>
+  </div>
+</div></div></section>
+<footer>© 2026 Create and Elevate™ · dream big, start small</footer>
+
+<!-- CART (Bootstrap offcanvas) -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="panel" aria-label="Cart">
+  <div class="offcanvas-header"><h3 class="m-0">Your cart</h3><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="items" class="flex-grow-1"></div>
+    <p class="my-3"><b>Total: <span id="total">₱0</span></b></p>
+    <button class="btn btn-p" onclick="cart={};save();render()">Clear cart</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
